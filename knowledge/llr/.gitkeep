@@ -1,0 +1,32 @@
+# 经验教训知识库
+
+此目录用于存储项目积累的经验教训文档 (Lessons Learned Reports)。
+
+## 目录结构
+
+```
+knowledge/llr/
+├── index.json           # LLR 索引文件 (自动生成)
+├── 2026-05-11-example-project.md  # LLR 文档示例
+└── ...
+```
+
+## 使用方式
+
+### 创建 LLR
+```bash
+python scripts/llr-collect.py create <project_name>
+```
+
+### 搜索 LLR
+```bash
+python scripts/llr-collect.py search <keyword>
+```
+
+## 上传规则
+
+- 每个项目/工具完成后1周内提交 LLR
+- 按时间戳命名: `YYYY-MM-DD-project-name.md`
+- 标签使用英文，便于搜索
+
+---
