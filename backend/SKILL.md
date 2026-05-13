@@ -49,6 +49,10 @@ review_cycle: 季度
 - 禁止绕过 tool-module-builder/SKILL.md 直接执行单工具编码
 - 禁止在设计文档、测试文档、任务清单缺失时开工
 - 禁止带着失败的测试提交
+- **禁止 SQL 查询使用字符串拼接（必须参数化）← 新增**
+- **禁止用户输入未验证直接拼入命令（必须列表参数）← 新增**
+- **禁止在代码中硬编码密码/API Key/Token（必须从环境变量）← 新增**
+- **禁止使用 innerHTML/dangerouslySetInnerHTML 处理用户输入 ← 新增**
 
 ### 新增禁止行为
 - 禁止在简化流程中跳过自检
@@ -79,6 +83,7 @@ Step 0: [RD]   执行 requirements-clarify.md  → 需求澄清（如需要）
 Step 1: [PMC]  执行 planning.md             → 输出开发计划表
 Step 2: [VER]  执行 tdd.md                  → TDD 红→绿→重构 循环
 Step 3: [PPQA] 执行 ppqa.md                 → 合规性检查 + 质量审计
+Step 3.1: [PPQA] 执行 security-coding.md   → OWASP 安全编码检查 ← 新增
 Step 4: [OPP]  执行 metrics.md             → 量化指标报告
 ```
 
@@ -110,6 +115,7 @@ F4: [OPP] 简化指标报告 (5分钟)
 | PPQA验证 | ppqa.md | 合规检查、质量审计 | PPQA |
 | OPP量化 | metrics.md | 量化指标报告 | OPP |
 | CAR根因 | car.md | Bug根因分析 | CAR |
+| **安全编码** | **security-coding.md** | **OWASP Top 10 防护规范** | **PPQA** |
 | Python规范 | languages/python.md | Python代码规范 | - |
 | Go规范 | languages/go.md | Go代码规范 | - |
 | Java规范 | languages/java.md | Java代码规范 | - |

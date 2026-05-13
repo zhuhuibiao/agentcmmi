@@ -35,6 +35,9 @@ review_cycle: 季度
 - 禁止遗漏当前工具的任何前端功能测试
 - 禁止遗漏当前工具的任何后端功能测试
 - 禁止遗漏当前工具的任何 API 测试
+- **禁止在未执行安全审计前交付代码（新增）**
+- **禁止跳过 A01 (Access Control) 和 A03 (Injection) 的安全测试（新增）**
+- **禁止将未修复的高风险漏洞标记为通过（新增）**
 
 ## 输入标准
 
@@ -59,7 +62,8 @@ Step 2: [VER]  执行 frontend-test.md   → 执行前端测试
 Step 3: [VER]  执行 backend-test.md    → 执行后端测试
 Step 4: [VER]  执行 api-test.md         → 执行接口测试
 Step 5: [PPQA] 执行 coverage-audit.md  → 覆盖率审计
-Step 6: [OPP]  execute metrics.md      → 量化评估
+Step 6: [PPQA] 执行 security-audit.md  → 安全专项审计 ← 新增
+Step 7: [OPP]  execute metrics.md      → 量化评估
 ```
 
 ### 按需触发
@@ -103,6 +107,7 @@ F2: [PMC] 直接派发任务清单 (5分钟)
 | 覆盖率审计 | coverage-audit.md | 测试覆盖完整性 | PPQA |
 | 量化评估 | metrics.md | OPP指标报告 | OPP |
 | CAR根因 | car.md | Bug根因分析 | CAR |
+| **安全审计** | **security-audit.md** | **OWASP Top 10 漏洞检测** | **PPQA + VER** |
 
 ## 输出标准
 
