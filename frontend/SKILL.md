@@ -36,6 +36,9 @@ review_cycle: 季度
 - 禁止改变当前系统的整体视觉风格
 - 禁止修改无关后端文件、无关工具页面
 - 禁止在设计文档缺失时开工
+- **禁止使用 dangerouslySetInnerHTML（必须用 textContent）← 新增**
+- **禁止 innerHTML 处理用户输入 ← 新增**
+- **禁止 localStorage 存储敏感信息（Token/Password）← 新增**
 
 ### 新增禁止行为
 - 禁止在简化流程中跳过自检
@@ -62,6 +65,7 @@ Step 0: [RD]   执行 requirements-clarify.md  → 需求澄清（如需要）
 Step 1: [PMC]  执行 planning.md             → 输出开发计划表
 Step 2: [VER]  执行 implementation.md      → 按设计文档实现
 Step 3: [PPQA] 执行 ppqa.md                 → 合规性检查 + 质量审计
+Step 3.1: [PPQA] 执行 security-coding.md   → XSS/CSP 安全检查 ← 新增
 Step 4: [OPP]  执行 metrics.md             → 量化指标报告
 ```
 
@@ -91,6 +95,7 @@ F4: [OPP] 简化指标报告 (5分钟)
 | 项目策划 | planning.md | 任务分解、开发计划表 | PMC |
 | 实现 | implementation.md | 按设计文档实现 | VER |
 | PPQA验证 | ppqa.md | 合规检查、质量审计 | PPQA |
+| **安全编码** | **security-coding.md** | **OWASP Top 10 前端防护** | **PPQA** |
 | OPP量化 | metrics.md | 量化指标报告 | OPP |
 | CAR根因 | car.md | Bug根因分析 | CAR |
 

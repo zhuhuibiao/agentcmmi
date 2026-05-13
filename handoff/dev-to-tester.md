@@ -40,10 +40,24 @@
 |--------|------|----------|------|
 | {issue_1} | {description} | {高/中/低} | {note} |
 
+## 安全测试结果 ← 新增
+
+| 检查项 | 工具 | 结果 | 备注 |
+|--------|------|------|------|
+| SQL注入 | ppqa-security-check.py | ✅/❌ | {note} |
+| XSS | ppqa-security-check.py | ✅/❌ | {note} |
+| 命令注入 | ppqa-security-check.py | ✅/❌ | {note} |
+| 敏感信息泄露 | ppqa-security-check.py | ✅/❌ | {note} |
+| 单元测试 | pytest/jest | ✅/❌ | {note} |
+| 集成测试 | pytest/jest | ✅/❌ | {note} |
+
 ## 测试重点
 
 1. [ ] {test_focus_1}
 2. [ ] {test_focus_2}
+3. [ ] 安全专项测试 ← 新增
+4. [ ] 认证授权测试 ← 新增
+5. [ ] 输入边界测试 ← 新增
 
 ## 测试工程师确认
 

@@ -67,6 +67,19 @@ last_updated: 2026-05-12
 □ 复用现有组件，不引入新的视觉语言
 ```
 
+## 安全检查清单 (OWASP Top 10)
+
+```
+□ 无 dangerouslySetInnerHTML 使用（除非经 DOMPurify 净化）
+□ 无 innerHTML 处理用户输入
+□ URL 参数使用 URLSearchParams，无字符串拼接
+□ Cookie 设置 SameSite 属性
+□ 无 eval/new Function 处理用户输入
+□ localStorage 不存储敏感信息
+□ CSP meta 标签已配置（生产环境）
+□ 运行 ppqa-security-check.py 无 XSS 报警
+```
+
 ## Playwright 测试执行模板
 
 ```powershell

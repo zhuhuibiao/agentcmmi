@@ -30,6 +30,17 @@
 - [ ] {constraint_1}
 - [ ] {constraint_2}
 
+## 安全设计要求
+
+| 项目 | 要求 | 实现方式 | 验证工具 |
+|------|------|----------|----------|
+| 认证方式 | {JWT/Session/OAuth} | {实现方式} | - |
+| 密码存储 | {bcrypt/argon2} | {实现方式} | - |
+| SQL注入防护 | 参数化查询 | ORM | ppqa-security-check.py |
+| XSS防护 | 输出编码 | 框架自带 | ppqa-security-check.py |
+| CSRF防护 | {Token/Cookie} | {实现方式} | - |
+| 敏感数据 | {加密/脱敏} | {实现方式} | - |
+
 ## 技术要求
 
 | 项目 | 要求 |
@@ -38,6 +49,7 @@
 | 框架 | {framework} |
 | 代码规范 | {规范文件名} |
 | 测试覆盖率 | ≥ {percentage}% |
+| 安全扫描 | ppqa-security-check.py 无高风险 |
 
 ## 风险提示
 
@@ -50,11 +62,13 @@
 1. [ ] {acceptance_criterion_1}
 2. [ ] {acceptance_criterion_2}
 3. [ ] {acceptance_criterion_3}
+4. [ ] 安全扫描无高风险报警 ← 新增
 
 ## 开发者确认
 
 - [ ] 已阅读设计文档
 - [ ] 理解 API 契约
+- [ ] 确认安全设计要求
 - [ ] 确认开发计划
 - [ ] 无疑问
 

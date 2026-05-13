@@ -59,6 +59,7 @@ Step 5: [PPQA] 执行 test-doc-design.md  → 生成测试文档
 Step 6: [PMC] 执行 test-doc-storage.md   → 存储测试文档
 Step 7: [PMC] 执行 task-list-design.md   → 生成任务清单
 Step 8: [PMC] 执行 task-list-storage.md → 存储任务清单
+Step 9: [PPQA] 执行 security-review.md  → 安全评审 ← 新增
 ```
 
 ### 决策流程（按需触发）
@@ -106,6 +107,7 @@ F2: [PMC] 直接派发任务清单 (5分钟)
 | 存储任务清单 | task-list-storage.md | 将任务清单写入目标路径 | PMC |
 | 决策分析 | dar.md | 技术选型、架构决策 | DAR |
 | 根因分析 | car.md | 设计缺陷分析 | CAR |
+| **安全评审** | **security-review.md** | **OWASP Top 10 安全评审** | **PPQA** |
 
 ## 输出标准
 
